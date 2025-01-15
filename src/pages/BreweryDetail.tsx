@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import BeersListBrewery from "../components/BeersListBrewery";
-import CardBeers from "./CardBeer";
 import ButtonSecondary from "../components/ButtonSecondary";
 
-function BiereDetail() {
-	const { id } = useParams();
+interface Brewery {
+    id_brewery: number;
+    name: string;
+    city: string;
+    country: string;
+    description: string;
+    url_website: string;
+}
 
-	const [brewery, setBrewery] = useState({});
+function BiereDetail() {
+	const { id } = useParams<{ id: string }>();
+
+	const [brewery, setBrewery] = useState<Brewery | null>(null);
 
 	const fetchBrewery = async () => {
 		const response = await fetch(
@@ -24,6 +32,9 @@ function BiereDetail() {
 
 
 
+	if (!brewery) {
+        return <div>Loading...</div>;
+    }
 
 
 
