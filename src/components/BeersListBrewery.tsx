@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CardBeers from "./CardBeer";
+import CardBeer from "./CardBeer";
 
 interface Beer {
     id_beer: number;
@@ -38,12 +38,12 @@ function BeerListBrewery({ id }: Props) {
 
     return (
         <div>
-            <section className="text-gray-600 body-font">
-                <div className="container px-5 py-24 mx-auto">
-                    <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900 text-center uppercase pb-10">Leurs Bières</h1>
+            <section className="text-gray-600 body-font bg-slate-100">
+                <div className="container px-5 py-10 mx-auto">
+                    <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900 text-left uppercase pb-10">Leurs Bières</h1>
                     <div className="flex flex-wrap -m-4">
                         {beers.map((beer: Beer) => {
-                            return <CardBeers key={beer.id_beer} id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} />;
+                            return <CardBeer key={beer.id_beer} id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} />;
                         })}
                     </div>
                 </div>
