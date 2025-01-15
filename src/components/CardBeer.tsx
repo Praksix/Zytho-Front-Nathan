@@ -1,12 +1,12 @@
+import { Link } from "react-router";
 
-
-function CardBeers({ key, name, type, price }: { key: number; name: string; type: string; price: number; }) {
+function CardBeers({ id_beer, name, type, price }: { id_beer: number; name: string; type: string; price: number; }) {
 	return (
 
-		<div key={key} className="lg:w-1/4 md:w-1/2 p-4 w-full">
-			<a className="block relative h-70 rounded overflow-hidden">
-				<img alt="ecommerce" className="object-cover object-center w-full h-full block" src="src/assets/lager.jpg" />
-			</a>
+		<div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+			<Link to={`/BiereDetail/${id_beer}`} className="block relative h-70 rounded overflow-hidden">
+				<img alt="ecommerce" className="object-cover object-center w-full h-full block" src={`http://localhost:5173/src/assets/${type}.jpg`} />
+			</Link>
 			<div className="mt-4">
 				<h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">{type}</h3>
 				<h2 className="text-gray-900 title-font text-lg font-medium">{name}</h2>
@@ -18,6 +18,7 @@ function CardBeers({ key, name, type, price }: { key: number; name: string; type
 }
 
 export default CardBeers;
+
 
 
 

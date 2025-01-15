@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CardBeers from "./CardBeer";
 
 interface Beer {
-    id: number;
+    id_beer: number;
     name: string;
     type: string;
     price: number;
@@ -32,10 +32,10 @@ function BeerList() {
         <div>
             <section className="text-gray-600 body-font">
     <div className="container px-5 py-24 mx-auto">
-    <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900 text-center uppercase pb-10">La séléction du chef</h1>
+    <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900 text-center uppercase pb-10">Nos Bières</h1>
     <div className="flex flex-wrap -m-4">
                 {beer.map((beer: Beer) => {
-                    return <CardBeers key={beer.id} name={beer.name} type={beer.type} price={beer.price} />;
+                    return  <CardBeers id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} />;
                 })}
             
         </div>

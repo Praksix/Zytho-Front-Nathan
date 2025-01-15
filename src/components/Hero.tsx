@@ -1,3 +1,7 @@
+import Button from "./Button";
+import ButtonSecondary from "./ButtonSecondary";
+import { Link } from "react-router-dom";
+
 function Hero({}: {}) {
     return (
         <section className="text-gray-600 body-font pb-0">
@@ -10,7 +14,7 @@ function Hero({}: {}) {
                 />
             </div>
             <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className=" font-bold title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                <h1 className=" font-extrabold title-font sm:text-4xl text-3xl mb-4 text-gray-900">
                 Bières
                 </h1>
                 <br className="hidden lg:inline-block" />
@@ -20,6 +24,11 @@ function Hero({}: {}) {
                 sélectionnées pour leur qualité, issue du monde entier, et importé
                 avec amour.
                 </p>
+                <div className="flex justify-center">
+		<Link to="/bieres" ><Button text="Nos Bières"/></Link>
+        <Link to="/breweries" ><ButtonSecondary text="Nos Brasseries"/></Link>
+		
+	  </div>
             </div>
             </div>
         </section>
