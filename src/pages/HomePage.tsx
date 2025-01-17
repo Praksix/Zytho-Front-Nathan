@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 
 
-function App() {
+function HomePage() {
   return (
     <>
     <Hero/>
@@ -11,4 +11,4 @@ function App() {
 
 
 
-export default App;
+export default HomePage;

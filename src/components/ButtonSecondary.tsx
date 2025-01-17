@@ -1,6 +1,6 @@
 function Button({text }: {text: string }) {
     return (
-        <button className="ml-0 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">{text}</button>
+        <button className="inline-flex mr-2 text-white bg-lightgreen border-2 border-lightgreen py-2 px-6 focus:outline-none hover:bg-lightgreenhover rounded text-lg">{text}</button>
     );
 }
 

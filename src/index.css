@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #36332f;
+    color: #FEFAE0;
+}
+
+#illus {
+    mix-blend-mode: screen;
+}
+
+#bg {
+    mix-blend-mode: screen;
+    opacity: 0.2;
+}
