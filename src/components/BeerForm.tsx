@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import OptionBrewery from "./OptionBrewery";
 import ButtonSubmit from "./ButtonSubmit";
-
+import { Link, useNavigate } from "react-router-dom";
 
 interface Brewery {
     id_brewery: number;
@@ -9,6 +9,7 @@ interface Brewery {
 }
 
 function BeerForm({ }: {}) {
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [id_brewery, setIdBrewery] = useState('');
@@ -61,6 +62,7 @@ function BeerForm({ }: {}) {
 
             if (response.ok) {
                 console.log('Beer data submitted successfully');
+                navigate('/ctrlbeers');
             } else {
                 const errorData = await response.json();
                 console.error('Failed to submit beer data', errorData);

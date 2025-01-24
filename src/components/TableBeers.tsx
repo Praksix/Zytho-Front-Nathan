@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import LigneBeer from "./LigneBeer";
 import { Link } from "react-router-dom";
 
+
 interface Beer {
     id_beer: number;
     name: string;
@@ -37,6 +38,11 @@ function TableBeers() {
     return (
 
 
+
+
+
+
+        
         <section className="text-gray-600 body-font">
             <div className="container px-20 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
@@ -44,29 +50,29 @@ function TableBeers() {
                     <Link to="/AddBeer"> <button className="bg-lightgreen hover:bg-blue-700 text-white font-light mt-5 py-2 px-4 rounded text-sm"> + Ajouter une bière</button></Link>
 
                 </div>
-                <div className="container flex justify-center mx-auto">
-                    <div className="flex flex-col">
-                        <div className="w-full">
-                            <div className="border-b border-lightgreen shadow">
-                                <table className="divide-y divide-green ">
-                                    <thead className="bg-green">
-                                        <tr>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                <div className="container flex justify-center mx-auto rounded-full">
+                    <div className="flex flex-col rounded-full">
+                        <div className="w-full rounded-full">
+                            <div className="border-b border-lightgreen shadow rounded-full">
+                                <table className="divide-y divide-green rounded-full">
+                                    <thead className="bg-green rounded-full">
+                                        <tr className="rounded">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 Nom
                                             </th>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 Type
                                             </th>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 ABV
                                             </th>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 Prix
                                             </th>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 Modifier
                                             </th>
-                                            <th className="px-6 text-left py-2 text-xs text-lightgreen">
+                                            <th className="px-6 text-left py-2 text-xs rounded text-lightgreen">
                                                 Supprimer
                                             </th>
                                         </tr>
