@@ -7,6 +7,7 @@ interface Beer {
     type: string;
     price: number;
     abv: number;
+    liked: boolean;
 }
 
 function BeerList() {
@@ -36,7 +37,7 @@ function BeerList() {
     <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900 text-center uppercase pb-10">Nos Bières</h1>
     <div className="flex flex-wrap -m-4">
                 {beer.map((beer: Beer) => {
-                    return  <CardBeers id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} abv={beer.abv} />;
+                    return  <CardBeers id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} abv={beer.abv} liked={beer.liked} />;
                 })}
             
         </div>

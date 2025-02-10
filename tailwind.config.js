@@ -11,6 +11,7 @@ module.exports = {
       'white': '#FEFAE0',
       'whitehover': '#ffffff',
       'green': '#4E6E5D',
+      'red': '#df2929',
     },
     extend: {},
   },
