@@ -77,7 +77,7 @@ function ModifBeerForm() {
             color,
             price: parseFloat(price),
             abv: parseFloat(abv),
-            id_brewery: parseInt(id_brewery),
+            id_brewery: parseInt(id_brewery)
         };
 
         try {

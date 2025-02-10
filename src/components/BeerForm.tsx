@@ -110,6 +110,7 @@ function BeerForm({ }: {}) {
                         </label>
                         <div className="relative">
                             <select value={id_brewery} onChange={(e) => setIdBrewery(e.target.value)} className="block text-green bg-white appearance-none w-full border border-gray-200  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-whitehover focus:border-gray-500">
+                            <option value="" disabled selected hidden>Choisissez une brasserie</option>
                                 {brewery.map((brewery: Brewery) => (
                                     <option key={brewery.id_brewery} value={brewery.id_brewery}>
                                     {brewery.name}

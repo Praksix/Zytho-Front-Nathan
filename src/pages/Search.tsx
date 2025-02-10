@@ -7,6 +7,7 @@ interface Beer {
     type: string;
     price: number;
     abv: number;
+    liked: boolean;
 }
 
 function Search() {
@@ -59,6 +60,15 @@ function Search() {
         
     };
 
+    const handleFilterLiked = () => {
+        
+        const likedBeers = beers.filter(beer => beer.liked == true); 
+        setSearchTerm(".");
+        setFilteredBeers([]);
+        setFilteredBeers(likedBeers);
+        
+    };
+
 
     console.log(searchTerm);
 
@@ -85,6 +95,7 @@ function Search() {
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" value="ipa" onClick={handleFilterIpa}>IPA</button>
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" onClick={handleFilterCheapBeers}>Pas chères</button>
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" onClick={handleFilterStrong}>Les bières fortes</button>
+                            <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" onClick={handleFilterLiked}>Aimées</button>
                             </div>
                         </div>
                         

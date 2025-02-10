@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Modals from "../components/Modals";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 interface LigneBeerProps {
     id_beer: number;
@@ -37,27 +40,27 @@ const LigneBeer: React.FC<LigneBeerProps> = ({ id_beer, name, type, price, abv }
     return (
         <>
             {alertMessage && (
-                <div className=" fixed inset-0 flex justify-center items-center bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
+                <div className=" fixed inset-0 flex justify-center items-center bg-green-500 text-white px-4 py-2  rounded shadow-lg z-50">
                     {alertMessage}
                 </div>
             )}
-            <tr key={id_beer} className="whitespace-nowrap border-b border-green">
+            <tr key={id_beer} className="whitespace-nowrap border-b border-green hover:bg-whitehover hover:mt-10">
                 <td className="px-6 py-4 text-sm text-green">
                     {name}
                 </td>
                 <td className="px-6 py-4">
-                    <div className="text-sm text-green">
+                    <div className="text-sm text-green ">
                         {type}
                     </div>
                 </td>
                 <td className="px-6 py-4">
-                    <div className="text-sm text-green">{abv} %</div>
+                    <div className="text-sm text-green ">{abv} %</div>
                 </td>
-                <td className="px-6 py-4 text-sm text-green">
+                <td className="px-6 py-4 text-sm text-green ">
                     {price}€
                 </td>
                 <td className="px-6 py-4">
-                    <Link to={`/modifbeer/${id_beer}`} className="cursor-pointer px-4 py-1 text-sm text-white bg-lightgreen rounded-full">Edit</Link>
+                    <Link to={`/modifbeer/${id_beer}`} className="cursor-pointer px-4 py-1 text-sm text-white bg-lightgreen rounded-full py-2"><FontAwesomeIcon icon={faPenToSquare} /></Link>
                 </td>
                 <td className="px-6 py-4">
                     <Modals open={open} onClose={() => setOpen(false)}>
@@ -66,7 +69,7 @@ const LigneBeer: React.FC<LigneBeerProps> = ({ id_beer, name, type, price, abv }
                                 <h3 className="text-lg font-black text-black">Supprimer ?</h3>
                             </div>
                             <div className="flex gap-4">
-                                <button onClick={() => deleteBeer(id_beer)} className="btn btn-danger w-full bg-white text-green pb-2 pt-2 rounded">Supprimer</button>
+                                <button onClick={() => deleteBeer(id_beer)} className="btn btn-danger w-full bg-white text-green pb-2 pt-2 rounded"><FontAwesomeIcon icon={faTrashCan} /></button>
                                 <button
                                     className="btn btn-dark w-full bg-lightgreen text-white rounded"
                                     onClick={() => setOpen(false)}
@@ -76,7 +79,7 @@ const LigneBeer: React.FC<LigneBeerProps> = ({ id_beer, name, type, price, abv }
                             </div>
                         </div>
                     </Modals>
-                    <a onClick={() => setOpen(true)} className="cursor-pointer px-4 py-1 text-sm text-white bg-lightgreen rounded-full">Delete</a>
+                    <a onClick={() => setOpen(true)} className="cursor-pointer px-4 py-1 text-sm text-white bg-lightgreen rounded-full py-2"><FontAwesomeIcon icon={faTrashCan} /></a>
                 </td>
             </tr>
         </>
