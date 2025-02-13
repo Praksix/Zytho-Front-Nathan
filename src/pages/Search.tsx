@@ -15,7 +15,7 @@ function Search() {
     const [beers, setBeers] = useState<Beer[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [inputValue, setInputValue] = useState('');
-    const [filteredBeers, setFilteredBeers] = useState([]);
+    const [filteredBeers, setFilteredBeers] = useState<Beer[]>([]);
 
 
     useEffect(() => {
@@ -96,7 +96,7 @@ function Search() {
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" value="ipa" onClick={handleFilterIpa}>IPA</button>
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" onClick={handleFilterCheapBeers}>Pas chères</button>
                             <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-4 rounded-full" onClick={handleFilterStrong}>Les bières fortes</button>
-                            <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-2 px-4 ml-2 mr-2 mb-3 rounded-full pt-2" onClick={handleFilterLiked}><svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                            <button className="bg-lightgreen hover:bg-gray-300 text-gray-500 font-medium py-3 px-4 ml-2 mr-2 mb-2 rounded-full pt-2" onClick={handleFilterLiked}><svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                                 </svg></button>
                             </div>
