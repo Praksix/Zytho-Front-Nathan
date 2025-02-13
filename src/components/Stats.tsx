@@ -1,18 +1,5 @@
-import Button from "./Button";
-import ButtonSecondary from "./ButtonSecondary";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-
-interface Beer {
-    id_beer: number;
-    name: string;
-    type: string;
-    price: number;
-    abv: number;
-}
-
 
 function Stats({ }: {}) {
 

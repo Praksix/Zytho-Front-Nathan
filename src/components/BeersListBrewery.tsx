@@ -8,6 +8,7 @@ interface Beer {
     price: number;
     id_brewery: number;
     abv: number;
+    liked: boolean;
 }
 
 interface Props {
@@ -44,7 +45,7 @@ function BeerListBrewery({ id }: Props) {
                     <h1 className="sm:text-3xl text-2xl font-bold title-font mb-4 text-white text-left uppercase pb-10">Leurs Bières</h1>
                     <div className="flex flex-wrap -m-4">
                         {beers.map((beer: Beer) => {
-                            return <CardBeer key={beer.id_beer} id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} abv={beer.abv}/>;
+                            return <CardBeer key={beer.id_beer} id_beer={beer.id_beer} name={beer.name} type={beer.type} price={beer.price} abv={beer.abv} liked={beer.liked}/>;
                         })}
                     </div>
                 </div>

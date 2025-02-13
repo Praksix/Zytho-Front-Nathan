@@ -1,6 +1,5 @@
 import { useEffect, useState, ChangeEvent } from 'react';
 import CardBeer from '../components/CardBeer';
-import index from '../index.css';
 
 interface Beer {
     id_beer: number;

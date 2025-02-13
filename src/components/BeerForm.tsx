@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import OptionBrewery from "./OptionBrewery";
 import ButtonSubmit from "./ButtonSubmit";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Brewery {
     id_brewery: number;
