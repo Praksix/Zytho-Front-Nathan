@@ -13,7 +13,7 @@ function Stats({ }: {}) {
         console.log("fetchBeers");
 
         // On récupère les données
-        const response = await fetch("http://localhost:3004/api/v1/Beers");
+        const response = await fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/Beers");
 
         // On transforme les données en JSON
         const data = await response.json();
@@ -33,7 +33,7 @@ function Stats({ }: {}) {
         console.log("fetchBreweies");
 
         // On récupère les données
-        const response = await fetch("http://localhost:3004/api/v1/Breweries");
+        const response = await fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/Breweries");
 
         // On transforme les données en JSON
         const data = await response.json();
@@ -53,7 +53,7 @@ function Stats({ }: {}) {
         console.log("fetchBreweies");
 
         // On récupère les données
-        const response = await fetch("http://localhost:3004/api/v1/Users");
+        const response = await fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/Users");
 
         // On transforme les données en JSON
         const data = await response.json();

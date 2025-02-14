@@ -18,7 +18,7 @@ function BiereDetail() {
 
     const fetchBeer = async () => {
         try {
-            const response = await fetch(`http://localhost:3004/api/v1/beers/${id}`);
+            const response = await fetch(`https://zytho-api-rest-nathan.onrender.com/api/v1/beers/${id}`);
             if (!response.ok) {
                 throw new Error("Erreur lors de la récupération de la bière");
             }
@@ -43,7 +43,7 @@ function BiereDetail() {
         const updatedBeer = { ...beer, liked: !beer.liked };
 
         try {
-            const response = await fetch(`http://localhost:3004/api/v1/beers/${beer.id_beer}`, {
+            const response = await fetch(`https://zytho-api-rest-nathan.onrender.com/api/v1/beers/${beer.id_beer}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(updatedBeer),

@@ -18,7 +18,7 @@ function Search() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3004/api/v1/Beers")
+        fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/Beers")
             .then((response) => response.json())
             .then((json) => {
                 setBeers(json);

@@ -19,7 +19,7 @@ function BiereDetail() {
 
 	const fetchBrewery = async () => {
 		const response = await fetch(
-			`http://localhost:3004/api/v1/breweries/${id}`
+			`https://zytho-api-rest-nathan.onrender.com/api/v1/breweries/${id}`
 		);
 		const data = await response.json();
 		console.log(data)

@@ -26,7 +26,7 @@ function BeerForm({ }: {}) {
         console.log("fetchBreweries");
 
         // On récupère les données
-        const response = await fetch("http://localhost:3004/api/v1/breweries");
+        const response = await fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/breweries");
 
         // On transforme les données en JSON
         const data = await response.json();
@@ -51,7 +51,7 @@ function BeerForm({ }: {}) {
         };
 
         try {
-            const response = await fetch('http://localhost:3004/api/v1/beers/', {
+            const response = await fetch('https://zytho-api-rest-nathan.onrender.com/api/v1/beers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

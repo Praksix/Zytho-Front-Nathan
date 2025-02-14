@@ -10,7 +10,7 @@ function Hero({}: {}) {
                 <img id="illus"
                 className="object-cover object-center rounded"
                 alt="hero"
-                src="https://github.com/Praksix/Zytho-Front-Nathan/blob/main/src/assets/illu.jpg?raw=true"
+                src="src/assets/illu.jpg"
                 />
             </div>
             <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

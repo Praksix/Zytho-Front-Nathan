@@ -39,7 +39,7 @@ function ModifBeerForm() {
 
     const fetchBreweries = async () => {
         try {
-            const response = await fetch("http://localhost:3004/api/v1/breweries");
+            const response = await fetch("https://zytho-api-rest-nathan.onrender.com/api/v1/breweries");
             const data = await response.json();
             setBreweries(data);
         } catch (error) {
@@ -49,7 +49,7 @@ function ModifBeerForm() {
 
     const fetchBeer = async () => {
         try {
-            const response = await fetch(`http://localhost:3004/api/v1/beers/${id}`);
+            const response = await fetch(`https://zytho-api-rest-nathan.onrender.com/api/v1//beers/${id}`);
             const data = await response.json();
             setBeer(data);
 
@@ -81,7 +81,7 @@ function ModifBeerForm() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3004/api/v1/beers/${id}`, {
+            const response = await fetch(`https://zytho-api-rest-nathan.onrender.com/api/v1/beers/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

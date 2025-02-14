@@ -21,7 +21,7 @@ const LigneBeer: React.FC<LigneBeerProps> = ({ id_beer, name, type, price, abv }
     const deleteBeer = async (id_beer: number) => {
         setOpen(false);
         try {
-            const response = await fetch(`http://localhost:3004/api/v1/beers/${id_beer}`, {
+            const response = await fetch(`https://zytho-api-rest-nathan.onrender.com/api/v1/beers/${id_beer}`, {
                 method: 'DELETE',
             });
             if (response.ok) {
